@@ -1,8 +1,8 @@
 {
   "name": "React-JS-Portfolio",
+  "homepage": "http://shahzaib1010hassan.github.io/shahzaib-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://www.rsiwal.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
