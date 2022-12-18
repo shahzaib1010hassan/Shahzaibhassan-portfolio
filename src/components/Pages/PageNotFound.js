@@ -1,31 +1,81 @@
+import {
+  Button,
+  createStyles,
+  Image,
+  SimpleGrid,
+  Text,
+  Title,
+} from "@mantine/core";
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { pageNotFound } from "../Assets";
 
+const useStyles = createStyles((theme) => ({
+  root: {
+    marginTop: 180,
+    paddingTop: 80,
+    paddingBottom: 80,
+  },
+
+  title: {
+    fontWeight: 900,
+    fontSize: 34,
+    marginBottom: theme.spacing.md,
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: 32,
+    },
+  },
+
+  control: {
+    [theme.fn.smallerThan("sm")]: {
+      width: "100%",
+    },
+  },
+
+  mobileImage: {
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
+  },
+
+  desktopImage: {
+    [theme.fn.smallerThan("sm")]: {
+      display: "none",
+    },
+  },
+}));
+
 function About() {
+  const { classes } = useStyles();
+
   return (
-    <Container fluid className="about-section">
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
+    <Container className={classes.root}>
+      <SimpleGrid
+        spacing={80}
+        cols={2}
+        breakpoints={[{ maxWidth: "sm", cols: 1, spacing: 40 }]}
+      >
+        <Image src={pageNotFound} className={classes.mobileImage} />
+        <div>
+          <Title className={classes.title}>Something is not right...</Title>
+          <Text color="dimmed" size="lg">
+            Page you are trying to open does not exist. You may have mistyped
+            the address, or the page has been moved to another URL. If you think
+            this is an error contact support.
+          </Text>
+          <Button
+            variant="outline"
+            size="md"
+            mt="xl"
+            className={classes.control}
           >
-            Page Not Found
-          </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "10px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={pageNotFound} alt="about" className="img-fluid" />
-          </Col>
-        </Row>
-      </Container>
+            Get back to home page
+          </Button>
+        </div>
+        <Image src={pageNotFound} className={classes.desktopImage} />
+      </SimpleGrid>
     </Container>
   );
 }

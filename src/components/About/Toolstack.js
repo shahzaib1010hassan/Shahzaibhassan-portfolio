@@ -1,15 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import {
-  SiVisualstudiocode,
-  SiGithub,
-  SiPostman,
-  SiBitbucket,
-  SiTrello,
-  SiWikimediacommons,
-  SiEclipseide,
-} from "react-icons/si";
 import { DiNetbeans } from "react-icons/di";
+import { SiGithub, SiPostman, SiVisualstudiocode } from "react-icons/si";
 
 function Toolstack() {
   return (

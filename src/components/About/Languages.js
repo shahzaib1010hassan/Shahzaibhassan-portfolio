@@ -1,25 +1,19 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { SiPhp, SiPython, SiJava, SiCplusplus } from "react-icons/si";
-import {
-  DiJavascript,
-  DiMysql,
-  DiHtml5,
-  DiCss3,
-  DiGoogleCloudPlatform,
-} from "react-icons/di";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import { DiJavascript, DiMysql, DiHtml5, DiCss3 } from "react-icons/di";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={3} className="tech-icons">
-        <SiPhp />
-        <p className="techstackdesc">PHP</p>
+        <DiJavascript />
+        <p className="techstackdesc">Javascript</p>
       </Col>
 
       <Col xs={4} md={3} className="tech-icons">
-        <DiJavascript />
-        <p className="techstackdesc">Javascript</p>
+        <SiTypescript />
+        <p className="techstackdesc">Typescript</p>
       </Col>
 
       <Col xs={4} md={3} className="tech-icons">
@@ -35,16 +29,6 @@ function Techstack() {
       <Col xs={4} md={3} className="tech-icons">
         <DiCss3 />
         <p className="techstackdesc">CSS 3</p>
-      </Col>
-
-      <Col xs={4} md={3} className="tech-icons">
-        <SiPython />
-        <p className="techstackdesc">Python</p>
-      </Col>
-
-      <Col xs={4} md={3} className="tech-icons">
-        <SiCplusplus />
-        <p className="techstackdesc">C & C++</p>
       </Col>
     </Row>
   );

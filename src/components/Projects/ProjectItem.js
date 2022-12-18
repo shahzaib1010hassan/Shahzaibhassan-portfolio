@@ -1,9 +1,8 @@
 import React from "react";
-import { Col, Card } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import {
-  VisitWebsite,
   InDevelopmentProject,
-  ProjectShutdown,
+  ProjectShutdown, VisitWebsite
 } from "./ProjectItemActions";
 
 export default function ProjectItem(props) {
