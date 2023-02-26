@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import resumePdf from "../../Assets/pdf/ShahzaibHassan-Resume.pdf";
+import resumePdf from "../../Assets/pdf/Shahzaib Hassan - CV.pdf";
 
 function ResumeNew() {
   const [thisYear, setThisYear] = useState(2022);

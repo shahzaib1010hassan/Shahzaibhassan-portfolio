@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { Container } from "react-bootstrap";
 import { pageNotFound } from "../Assets";
+import { Redirect } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -70,6 +71,7 @@ function About() {
             size="md"
             mt="xl"
             className={classes.control}
+            onClick={<Redirect to="/" replace={true} />}
           >
             Get back to home page
           </Button>
